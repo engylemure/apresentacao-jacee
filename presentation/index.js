@@ -17,8 +17,10 @@ import {
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 import CoverPage from "./me/coverPage";
-import Interactive from '../assets/interactive'
-import WhatIs from './git/whatis'
+import WhatIsGit from "./git/whatis";
+import AboutGit from "./git/about";
+import WhatIsDocker from "./docker/whatis";
+import UsageGit from "./git/usage";
 
 // Require CSS
 require("normalize.css");
@@ -41,34 +43,25 @@ export default class Presentation extends React.Component {
           <CoverPage/>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <WhatIs info={"git"}/>
+          <WhatIsGit info={"git"}/>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <WhatIs info={"github"}/>
+          <WhatIsGit info={"github"}/>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+        <Slide transition={["fade"]} bgColor="tertiary" >
+          <AboutGit/>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
+        <Slide transition={["fade"]} bgColor="tertiary" >
+          <UsageGit part={1}/>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide transition={["fade"]} bgColor="tertiary" >
+          <UsageGit part={2}/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary" >
+          <UsageGit part={3}/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="white" >
+          <WhatIsDocker/>
         </Slide>
       </Deck>
     );

@@ -31,13 +31,17 @@ export default class Usage extends React.Component {
 
     part2 = () => {
       return (
-        <div />
+          <div >
+
+          </div>
       );
     };
     part3 = () => {
-      return (
-        <div />
-      );
+        return (
+            <div>
+
+            </div>
+        )
     };
     render() {
       return this[`part${this.props.part}`]();
