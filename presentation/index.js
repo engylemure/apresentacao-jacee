@@ -16,6 +16,9 @@ import {
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import CoverPage from "./me/coverPage";
+import Interactive from '../assets/interactive'
+import WhatIs from './git/whatis'
 
 // Require CSS
 require("normalize.css");
@@ -35,12 +38,13 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
-          </Text>
+          <CoverPage/>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <WhatIs info={"git"}/>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <WhatIs info={"github"}/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
