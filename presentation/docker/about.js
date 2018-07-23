@@ -20,10 +20,10 @@ export default class About extends React.Component {
     return (
       <div>
         <Heading size={1} fit caps lineHeight={1} textColor="black">
-           Vamos comecar
+           Caso queira baixar o Docker em sua casa ou computador acesse:
         </Heading>
-        <Link href="https://github.com/">
-          <Text bold caps textColor="white">Acesse o Github e faca seu cadastro</Text>
+        <Link href="https://www.docker.com/community-edition">
+          <Text bold caps textColor="white">Docker Community Edition</Text>
         </Link>
       </div>
     );
