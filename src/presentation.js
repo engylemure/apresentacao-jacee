@@ -22,6 +22,7 @@ import AboutGit from "./git/about";
 import WhatIsDocker from "./docker/whatis";
 import UsageGit from "./git/usage";
 import AboutDocker from "./docker/about";
+import UsageDocker from './docker/usage'
 // Require CSS
 require("normalize.css");
 
@@ -65,6 +66,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="#0087C9" >
           <AboutDocker/>
+        </Slide >
+        <Slide transition={["fade"]} bgColor="#0087C9">
+          <UsageDocker part={1}/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#0087C9">
+          <UsageDocker part={2}/>
         </Slide>
       </Deck>
     );

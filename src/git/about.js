@@ -23,7 +23,7 @@ export default class About extends React.Component {
            Vamos comecar
         </Heading>
         <Link href="https://github.com/">
-          <Text bold caps textColor="white">Acesse o Github e faca seu cadastro</Text>
+          <Text bold caps textColor="white">Acesse o Github e faça seu cadastro</Text>
         </Link>
       </div>
     );

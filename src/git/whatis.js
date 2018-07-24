@@ -13,11 +13,14 @@ import {
   Image, Appear
 } from "spectacle";
 
+import GitLogo from "../assets/git.png";
+import GitHubLogo from "../assets/github.png";
+
 export default class WhatIs extends React.Component {
   git = () => {
     return (
       <div>
-        <Image src={"https://github.com/engylemure/apresentacao-jacee/raw/master/assets/git.png"} margin="0px auto 40px" height="200px"/>
+        <Image src={GitLogo} margin="0px auto 40px" height="200px"/>
         <Text margin="10px 0 0" size={1} textSize="0.6em" textColor="secondary" bold textAlign={"justify"}>
             Git é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo. O Git foi inicialmente projetado e desenvolvido por Linus Torvalds para o desenvolvimento do kernel Linux, mas foi adotado por muitos outros projetos.
         </Text>
@@ -31,7 +34,7 @@ export default class WhatIs extends React.Component {
   github = () => {
     return (
       <div>
-        <Image src={"https://github.com/engylemure/apresentacao-jacee/raw/master/assets/github.png"} margin="0px auto 40px" height="200px"/>
+        <Image src={GitHubLogo} margin="0px auto 40px" height="200px"/>
         <Text margin="10px 0 0" size={1} textSize="1em" textColor="secondary" bold>
           GitHub é uma plataforma de hospedagem de código-fonte com controle de versão usando o Git.
         </Text>

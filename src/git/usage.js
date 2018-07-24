@@ -11,7 +11,7 @@ import {
   Slide,
   Text,
   Image,
-  Link, Appear, Fill, Layout
+  Link, Appear, Fill, Layout, Code
 } from "spectacle";
 
 export default class Usage extends React.Component {
@@ -26,7 +26,7 @@ export default class Usage extends React.Component {
             <Text bold caps textColor="white">git - guia prático</Text>
           </Link>
           <Text bold caps textColor="black">
-                ou a Documentacao
+                ou a Documentacão
           </Text>
           <Link href="https://git-scm.com/docs">
             <Text bold caps textColor="white">Clique aqui</Text>
@@ -39,14 +39,14 @@ export default class Usage extends React.Component {
       return (
         <div >
           <Text bold caps textColor="black">
-                  Antes de mais nada vamos ao basico:
+                  Antes de mais nada vamos ao básico:
           </Text>
           <List>
-            <Appear><ListItem bold textSize={"0.8em"}>git init</ListItem></Appear>
-            <Appear><ListItem bold textSize={"0.8em"}>git clone usuário@servidor:/caminho/para/o/repositório</ListItem></Appear>
-            <Appear><ListItem bold textSize={"0.8em"}>{"git add <arquivo> "}</ListItem></Appear>
-            <Appear><ListItem bold textSize={"0.8em"}>{"git commit -m \"comentários das alterações\"" }</ListItem></Appear>
-            <Appear><ListItem bold textSize={"0.8em"}>{"git push origin <branch>"}</ListItem></Appear>
+              <Appear><ListItem bold textSize={"0.8em"}>git init</ListItem></Appear>
+              <Appear><ListItem bold textSize={"0.8em"}>git clone usuário@servidor:/caminho/para/o/repositório</ListItem></Appear>
+              <Appear><ListItem bold textSize={"0.8em"}>{"git add <arquivo> "}</ListItem></Appear>
+              <Appear><ListItem bold textSize={"0.8em"}>{"git commit -m \"comentários das alterações\"" }</ListItem></Appear>
+              <Appear><ListItem bold textSize={"0.8em"}>{"git push origin <branch>"}</ListItem></Appear>
           </List>
         </div>
       );
@@ -69,7 +69,7 @@ export default class Usage extends React.Component {
           <Appear fid={"2"}>
             <div>
               <Text bold caps textColor="black">
-                Obtenha o repositorio em sua maquina local com o comando:
+                Obtenha o repositório em sua máquina local com o comando:
               </Text>
               <Layout>
                 <Fill>
