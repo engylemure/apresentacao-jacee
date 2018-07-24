@@ -23,6 +23,8 @@ import WhatIsDocker from "./docker/whatis";
 import UsageGit from "./git/usage";
 import AboutDocker from "./docker/about";
 import UsageDocker from './docker/usage'
+import WhatIsJS from "./js/whatis";
+
 // Require CSS
 require("normalize.css");
 
@@ -72,6 +74,18 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="#0087C9">
           <UsageDocker part={2}/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#0087C9">
+          <UsageDocker part={3}/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#0087C9">
+          <UsageDocker part={4}/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#0087C9">
+          <UsageDocker part={5}/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#e6e6e6">
+          <WhatIsJS />
         </Slide>
       </Deck>
     );

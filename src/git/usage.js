@@ -73,7 +73,7 @@ export default class Usage extends React.Component {
               </Text>
               <Layout>
                 <Fill>
-                  <Heading size={6} caps textColor="secondary" bgColor="white" margin={10} lineHeight={4} textSize={"0.6em"}>
+                  <Heading size={6} textColor="secondary" bgColor="white" margin={10} lineHeight={4} textSize={"0.6em"}>
                     git clone https://github.com/engylemure/jacee-ufes
                   </Heading>
                 </Fill>
