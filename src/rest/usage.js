@@ -56,18 +56,22 @@ export default class Usage extends React.Component {
   frameworksList = () => {
     return(
       <div>
-          <Link href="http://expressjs.com/">
-            <Text bold textSize={'1.2em'} margin={10} textColor={"#4286f4"} >ExpressJS</Text>
-          </Link>
-          <Link href="https://www.mysql.com/">
-            <Text bold textSize={'1.2em'} margin={10} textColor={"#4286f4"} >{this.state.dataBaseType === "sql" ? "MySQL" : "MongoDB"  } </Text>
-          </Link>
-          <Link href="http://mongoosejs.com/">
-            <Text bold textSize={'1.2em'} margin={10} textColor={"#4286f4"} >{this.state.dataBaseType === "sql" ? "Sequelize" : "Mongoose"  }</Text>
-          </Link>
-          <Link href="https://www.docker.com/">
-            <Text bold textSize={'1.2em'} margin={10} textColor={"#4286f4"} >Docker</Text>
-          </Link>
+        <Text bold textSize={'1.5em'} margin={10} textColor={"#47476b"} textAlign={"justify"}>Framework de Servidor Web para NodeJs:</Text>
+        <Link href="http://expressjs.com/">
+          <Text bold textSize={'1.2em'} margin={10} textColor={"#4286f4"} >ExpressJS</Text>
+        </Link>
+        <Text bold textSize={'1.5em'} margin={10} textColor={"#47476b"} textAlign={"justify"}>Banco de dados:</Text>
+        <Link href={this.state.dataBaseType === "sql" ? "https://www.mysql.com/" : "https://www.mongodb.com/"}>
+          <Text bold textSize={'1.2em'} margin={10} textColor={"#4286f4"} >{this.state.dataBaseType === "sql" ? "MySQL" : "MongoDB"  } </Text>
+        </Link>
+        <Text bold textSize={'1.5em'} margin={10} textColor={"#47476b"} textAlign={"justify"}>Framework ORM(Object Relational Mapping ou Mapeamento Objeto Relacional):</Text>
+        <Link href={this.state.dataBaseType === "sql" ? "http://docs.sequelizejs.com/" : "http://mongoosejs.com/"}>
+          <Text bold textSize={'1.2em'} margin={10} textColor={"#4286f4"} >{this.state.dataBaseType === "sql" ? "Sequelize" : "Mongoose"  }</Text>
+        </Link>
+        <Text bold textSize={'1.5em'} margin={10} textColor={"#47476b"} textAlign={"justify"}>Já sabemos pro que usar né?</Text>
+        <Link href="https://www.docker.com/">
+          <Text bold textSize={'1.2em'} margin={10} textColor={"#4286f4"} >Docker</Text>
+        </Link>
       </div>
     )
   }
