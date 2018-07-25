@@ -11,7 +11,7 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
 } from "spectacle";
 
 // Import theme
@@ -24,7 +24,11 @@ import UsageGit from "./git/usage";
 import AboutDocker from "./docker/about";
 import UsageDocker from './docker/usage'
 import WhatIsJS from "./js/whatis";
-
+import AboutJS from './js/about'
+import UsageJS from './js/usage'
+import WhatIsREST from './rest/whatis'
+import UsageREST from './rest/usage'
+import TheEnd from './assets/the-end.jpg'
 // Require CSS
 require("normalize.css");
 
@@ -86,6 +90,31 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="#e6e6e6">
           <WhatIsJS />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#e6e6e6">
+          <AboutJS/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#e6e6e6">
+          <UsageJS/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#e6e6e6">
+          <WhatIsREST info={'api'}/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#e6e6e6">
+          <WhatIsREST info={'restful'}/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#e6e6e6">
+          <UsageREST />
+        </Slide>
+        <Slide transition={["slide"]} bgImage={TheEnd} bgDarken={0.5}>
+          <Heading size={1} textSize={"2em"} caps lineHeight={1} textColor="#f4429e">Creditos e agradecimentos a:</Heading>
+          <List>
+            <ListItem bold textSize={"1.2em"} textColor={"white"}>WikiPedia</ListItem>
+            <ListItem bold textSize={"1.2em"} textColor={"white"}>GitHub</ListItem>
+            <ListItem bold textSize={"1.2em"} textColor={"white"}>StackOverflow</ListItem>
+            <ListItem bold textSize={"1.2em"} textColor={"white"}>E alguns outros sites que não lembro o nome</ListItem>
+            <ListItem bold textSize={"1.2em"} textColor={"white"}>...</ListItem>
+          </List>
         </Slide>
       </Deck>
     );

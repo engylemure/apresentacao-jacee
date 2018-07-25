@@ -13,24 +13,49 @@ import {
   Image
 } from "spectacle";
 
-import DockerLogo from "../assets/docker.png";
+import RESTfulLogo from "../assets/restful.png";
+import APILogo from "../assets/api.png";
 
 export default class WhatIs extends React.Component {
-  docker = () => {
+  api = () => {
     return (
       <div>
-        <Image src={DockerLogo} margin="0px auto 40px" height="200px"/>
+        <Image src={APILogo} margin="0px auto 40px" height="200px"/>
         <Text margin="10px 0 0" size={1} textSize="0.6em" textColor="black" bold textAlign={"justify"}>
-            O docker é uma alternativa de virtualização em que o kernel da máquina hospedeira é compartilhado com a máquina virtualizada ou o software em operação, portanto um desenvolvedor pode agregar a seu software a possibilidade de levar as bibliotecas e outras dependências do seu programa junto ao software com menos perda de desempenho do que a virtualização do hardware de um servidor completo. Assim, o docker torna operações em uma infraestrutura como serviços web mais intercambiável, eficientes e flexíveis.
+          O acrônimo API que provém do inglês Application Programming Interface,
+          trata-se de um conjunto de rotinas e padrões estabelecidos e documentados
+          por uma aplicação A, para que outras aplicações consigam utilizar as funcionalidades desta aplicação A,
+          sem precisar conhecer detalhes da implementação do software.
         </Text>
         <Text margin="10px 0 0" size={1} textSize="0.6em" textColor="black" bold textAlign={"justify"}>
-            Segundo uma análise da 451 Research, o "docker é uma ferramenta que pode empacotar um aplicativo e suas dependências em um recipiente virtual que pode ser executado em qualquer servidor Linux. Isso ajuda a permitir flexibilidade e portabilidade de onde o aplicativo pode ser executado, quer nas instalações, nuvem pública, nuvem privada, entre outros."        </Text>
+          Desta forma, entendemos que as APIs permitem uma interoperabilidade entre aplicações.
+          Em outras palavras, a comunicação entre aplicações e entre os usuários.
+        </Text>
       </div>
     );
   };
+  restful = () => {
+    return (
+      <div>
+        <Image src={RESTfulLogo} margin="0px auto 40px" height="200px"/>
+        <Text margin="10px 0 0" size={1} textSize="0.6em" textColor="black" bold textAlign={"justify"}>
+          REST significa Representational State Transfer. Em português, Transferência de Estado Representacional.
+          Trata-se de uma abstração da arquitetura da Web. Resumidamente, o REST consiste em princípios/regras/constraints
+          que, quando seguidas, permitem a criação de um projeto com interfaces bem definidas.
+          Desta forma, permitindo, por exemplo, que aplicações se comuniquem.
+        </Text>
+        <Text margin="10px 0 0" size={1} textSize="0.6em" textColor="black" bold textAlign={"justify"}>
+          RESTful é a capacidade de determinado sistema aplicar os princípios de REST.
+        </Text>
+      </div>
+    )
+  }
 
   render() {
-    return this.docker();
+    return this[this.props.info]();
   }
 }
 
+WhatIs.defaultProps = {
+  info: 'api'
+}

@@ -1,17 +1,11 @@
 import React from "react";
 
 import {
-  BlockQuote,
-  Cite,
-  Deck,
+  Layout,
+  Fill,
   Heading,
-  ListItem,
-  List,
-  Quote,
-  Slide,
-  Text,
-  Image,
-  Link
+  Link,
+  Text
 } from "spectacle";
 
 export default class About extends React.Component {
@@ -20,11 +14,17 @@ export default class About extends React.Component {
     return (
       <div>
         <Heading size={1} fit caps lineHeight={1} textColor="black">
-           Caso queira baixar o Docker em sua casa ou computador acesse:
+           Caso queira acesar um site com alguns tutoriais:
         </Heading>
-        <Link href="https://www.docker.com/community-edition">
-          <Text bold caps textColor="white">Docker Community Edition</Text>
-        </Link>
+        <Layout>
+          <Fill>
+            <Link href="https://www.javascript.com/">
+              <Text bold textColor="black" bgColor="yellow" padding={"20px 0px 20px 0px"} margin={"10px 6em 10px 6em"}>
+                JavaScript
+              </Text>
+            </Link>
+          </Fill>
+        </Layout>
       </div>
     );
   };
