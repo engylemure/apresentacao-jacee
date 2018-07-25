@@ -1,9 +1,11 @@
 {
   "main.css": "static/css/main.653da357.css",
   "main.css.map": "static/css/main.653da357.css.map",
-  "main.js": "static/js/main.540df07d.js",
-  "main.js.map": "static/js/main.540df07d.js.map",
+  "main.js": "static/js/main.26cfb3b2.js",
+  "main.js.map": "static/js/main.26cfb3b2.js.map",
+  "static\\media\\api.png": "static/media/api.b96a2e61.png",
   "static\\media\\docker.png": "static/media/docker.f9e224e7.png",
   "static\\media\\github.png": "static/media/github.ef468e27.png",
-  "static\\media\\js.png": "static/media/js.0cded3a3.png"
+  "static\\media\\js.png": "static/media/js.0cded3a3.png",
+  "static\\media\\the-end.jpg": "static/media/the-end.c01f35a1.jpg"
 }
